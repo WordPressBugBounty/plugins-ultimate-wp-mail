@@ -7,7 +7,7 @@ Author: Etoile Web Design
 Author URI: https://www.etoilewebdesign.com/
 Terms and Conditions: https://www.etoilewebdesign.com/plugin-terms-and-conditions/
 Text Domain: ultimate-wp-mail
-Version: 1.3.1
+Version: 1.3.2
 */
 
 
@@ -56,7 +56,7 @@ class ewduwpmInit {
 		define( 'EWD_UWPM_PLUGIN_URL', untrailingslashit( plugin_dir_url( __FILE__ ) ) );
 		define( 'EWD_UWPM_PLUGIN_FNAME', plugin_basename( __FILE__ ) );
 		define( 'EWD_UWPM_TEMPLATE_DIR', 'ewd-uwpm-templates' );
-		define( 'EWD_UWPM_VERSION', '1.3.1' );
+		define( 'EWD_UWPM_VERSION', '1.3.2' );
 
 		define( 'EWD_UWPM_EMAIL_POST_TYPE', 'uwpm_mail_template' );
 		define( 'EWD_UWPM_SMS_POST_TYPE', 'uwpm_sms_template' );
