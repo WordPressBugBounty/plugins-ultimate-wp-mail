@@ -546,9 +546,15 @@ class ewduwpmDatabaseManager {
 	 * @since 1.0.0
 	 */
 	public function maybe_log_email_interaction() {
-		global $ewd_uwpm_controller;
+		global $wpdb, $ewd_uwpm_controller;
+
+		if ( is_admin() ) { return; }
 
 		if ( empty( $_GET['ewd_uwpm_id'] ) ) { return; }
+
+		$email_send_id = $wpdb->get_var( $wpdb->prepare( "SELECT Email_Send_ID FROM $this->send_events_table_name WHERE Email_Unique_Identifier=%s", $email_unique_identifier ) );
+	
+		if ( $email_send_id == 0 ) { return; }
 
 		if ( empty( $_GET['ewd_upwm_link_url'] ) ) { 
 			

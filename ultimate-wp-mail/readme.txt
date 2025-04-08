@@ -3,7 +3,7 @@ Contributors: Rustaurius, EtoileWebDesign
 Tags: email, sms notifications, wpforms sms, woocommerce notifications, crm, email log, smtp, woocommerce crm, wpforms notifications, customer relationship management, woocommerce emails, email blast, message users, email users
 Requires at least: 5.0
 Tested up to: 6.7
-Stable tag: 1.3.2
+Stable tag: 1.3.3
 License: GPLv3
 License URI:http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -235,6 +235,9 @@ When creating or editing an email, in the dropdown list found just above the "Em
 - [Our Support Center](https://www.etoilewebdesign.com/support-center/)
 
 == Changelog ==
+
+= 1.3.3 (2025-03-13) =
+- Fixed an issue with incorrect redirecting for link tracking.
 
 = 1.3.2 (2024-11-25) =
 - Tested with WordPress 6.7.
