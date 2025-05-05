@@ -1278,7 +1278,7 @@ class ewduwpmNotifications {
 
 			$woocommerce['previous_wc_products'] = (array) $woocommerce['previous_wc_products'];
 			
-			$product_id_string = '(' . implode( ',', $woocommerce['previous_wc_products'] ) . ')';
+			$product_id_string = '(' . implode( ',', array_map( 'intval', $woocommerce['previous_wc_products'] ) ) . ')';
 	
 			$woocommerce_order_items_table_name = $wpdb->prefix . 'woocommerce_order_items';
 			$woocommerce_order_itemmeta_table_name = $wpdb->prefix . 'woocommerce_order_itemmeta';

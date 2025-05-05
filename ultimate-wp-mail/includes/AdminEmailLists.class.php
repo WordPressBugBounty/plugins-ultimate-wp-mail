@@ -76,6 +76,8 @@ class ewduwpmAdminEmailLists {
 
 					<input type='hidden' name='ewd_uwpm_email_list_save_values' />
 
+					<?php wp_nonce_field( 'ewd-uwpm-email-list-nonce', 'ewd_uwpm_email_list_nonce', true, true ); ?>
+
 					<div class='ewd-uwpm-email-list-heading-row'>
 						<div class='ewd-uwpm-email-list-heading-cell'><?php _e( 'List Name', 'ultimate-wp-mail' ); ?></div>
 						<div class='ewd-uwpm-email-list-heading-cell'><?php _e( 'Number of Users', 'ultimate-wp-mail' ); ?></div>
@@ -198,6 +200,11 @@ class ewduwpmAdminEmailLists {
 	 * @since 1.0.0
 	 */
 	public function save_email_lists() {
+
+		if ( ! wp_verify_nonce( $_POST['ewd_uwpm_email_list_nonce'], 'ewd-uwpm-email-list-nonce' ) ) {
+
+			return false;
+		}
 
 		$email_lists = json_decode( stripslashes( sanitize_text_field( $_POST['ewd_uwpm_email_list_save_values'] ) ) );
 
